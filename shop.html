@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shop - Gleam Gallery</title>
+
+<style>
+
+/* Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+}
+/* Heading */
+h2 {
+    text-align: center;
+    padding: 30px;
+    font-size: 28px;
+}
+/* Product Grid */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px 60px;
+}
+/* Product Card */
+.product-card {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+}
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+/* Product Info */
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+.product-info h4 {
+    margin: 10px 0;
+}
+.product-info p {
+    font-weight: bold;
+    color: #e91e63;
+}
+/* Button */
+.product-info button {
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.product-info button:hover {
+    background: #e91e63;
+}
+</style>
+</head>
+<body>
+<h2 id="category-title"></h2>
+
+<div class="products">
+
+    <!-- CLOTHES -->
+    <div class="product-card" data-category="clothes">
+        <img src="assets/kurti.jpg">
+        <div class="product-info">
+            <h4>Designer Kurti</h4>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/suit.jpg">
+        <div class="product-info">
+            <h4>Designer Suit</h4>
+            <p>₹1999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/frock.jpg">
+        <div class="product-info">
+            <h4>Frock Dress</h4>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/formal.jpg">
+        <div class="product-info">
+            <h4>Formal Dress</h4>
+            <p>₹3599</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/top.jpg">
+        <div class="product-info">
+            <h4>Short Top</h4>
+            <p>₹499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/frock2.jpg">
+        <div class="product-info">
+            <h4>Party Wear Dress</h4>
+            <p>₹2599</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/suit2.jpg">
+        <div class="product-info">
+            <h4>Designer Suit</h4>
+            <p>₹1999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/backgroun3.jpg">
+        <div class="product-info">
+            <h4>Designer Dress</h4>
+            <p>₹4999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="clothes">
+        <img src="assets/traditional.jpg">
+        <div class="product-info">
+            <h4>Designer Suits</h4>
+            <p>₹7999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- BEAUTY -->
+    <div class="product-card" data-category="beauty">
+        <img src="assets/fashwash2.jpg">
+        <div class="product-info">
+            <h4>Ponds Fashwash</h4>
+            <p>₹499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/creame.jpg">
+        <div class="product-info">
+            <h4>Nivea Creame</h4>
+            <p>₹299</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/perfume.jpg">
+        <div class="product-info">
+            <h4>Royal Perfume</h4>
+            <p>₹899</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/eyeshadow.jpg">
+        <div class="product-info">
+            <h4>Eyeshadow Paletes</h4>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/facepowder.jpg">
+        <div class="product-info">
+            <h4>Lakhme Facepowder</h4>
+            <p>₹899</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/brush.jpg">
+        <div class="product-info">
+            <h4>Brush</h4>
+            <p>₹499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <!--
+    <div class="product-card" data-category="beauty">
+        <img src="assets/fashwash.jpg">
+        <div class="product-info">
+            <h4>Himalaya Facewash</h4>
+            <p>₹199</p>
+            <button>Add to Cart</button>
+        </div>
+    </div> -->
+    <div class="product-card" data-category="beauty">
+        <img src="assets/backgroundBeauty2.jpg">
+        <div class="product-info">
+            <h4>Skincare Packs</h4>
+            <p>₹2999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/beauty.jpg">
+        <div class="product-info">
+            <h4>Beauty Packs</h4>
+            <p>₹1999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/beauty3.jpg">
+        <div class="product-info">
+            <h4>Makeup Packs</h4>
+            <p>₹2999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="beauty">
+        <img src="assets/crop1.jpg">
+        <div class="product-info">
+            <h4>Face Cleaning Packs</h4>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    
+    <!--Hand Bags-->
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/bag2.jpg">
+        <div class="product-info">
+            <h4>Pink Bag</h4>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/bag3.jpg">
+        <div class="product-info">
+            <h4>Mini Bag</h4>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/bag4.jpg">
+        <div class="product-info">
+            <h4>Soft Bag</h4>
+            <p>₹1699</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/bagbag.jpg">
+        <div class="product-info">
+            <h4>Pink Bag</h4>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/bagbag2.jpg">
+        <div class="product-info">
+            <h4>Family Bags</h4>
+            <p>₹2599</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/brand2.jpg">
+        <div class="product-info">
+            <h4>Ethical Bags</h4>
+            <p>₹1999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/bag6.jpg">
+        <div class="product-info">
+            <h4>Mini Bags</h4>
+            <p>₹899</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/crop5.jpg">
+        <div class="product-info">
+            <h4>Fabric Bags</h4>
+            <p>₹1699</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="Handbag">
+        <img src="assets/crop4.jpg">
+        <div class="product-info">
+            <h4>Formal Bags</h4>
+            <p>₹1399</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- FOOTWEAR -->
+    <div class="product-card" data-category="footwear">
+        <img src="assets/boot.jpg">
+        <div class="product-info">
+            <h4>Boot Shoes</h4>
+            <p>₹1599</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="footwear">
+        <img src="assets/foot2.jpg">
+        <div class="product-info">
+            <h4>Party Wear Foots</h4>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="footwear">
+        <img src="assets/foot3.jpg">
+        <div class="product-info">
+            <h4>Shoes</h4>
+            <p>₹1099</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="footwear">
+        <img src="assets/foot.jpg">
+        <div class="product-info">
+            <h4>Casual Footwears</h4>
+            <p>₹399</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="footwear">
+        <img src="assets/hiles.jpg">
+        <div class="product-info">
+            <h4>High Hiles</h4>
+            <p>₹999</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="footwear">
+        <img src="assets/hiles2.jpg">
+        <div class="product-info">
+            <h4>High Hilies</h4>
+            <p>₹699</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card" data-category="footwear">
+        <img src="assets/footwearbackgroun2.jpg">
+        <div class="product-info">
+            <h4>High Hilies</h4>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+        <div class="product-card" data-category="footwear">
+        <img src="assets/footwearbackground.jpg">
+        <div class="product-info">
+            <h4>Formal Shoes</h4>
+            <p>₹1299</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+/* Get category from URL */
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+const products = document.querySelectorAll(".product-card");
+const title = document.getElementById("category-title");
+
+if(category){
+    title.innerText = category.toUpperCase() + " COLLECTION";
+} else {
+    title.innerText = "ALL PRODUCTS";
+}
+
+/* Filter Products */
+products.forEach(product => {
+    if(category){
+        if(product.dataset.category !== category){
+            product.style.display = "none";
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>
